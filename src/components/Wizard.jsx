@@ -10,18 +10,23 @@ import Typography from "@mui/material/Typography";
 
 const steps = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: "Carrier Arrives @ Caleres",
+    description: `Notify officer that gates must be kept closed and no authorised trucks are allowed into the yard.`,
   },
   {
-    label: "Create an ad group",
+    label: "Is the Driver at the righht address?!",
     description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+      "Show addresses for CAL1 and CAL2 here. Redirect to alternative address if not",
   },
   {
-    label: "Create an ad",
+    label: "Capture driver information",
+    description: `Try out different ad text to see what brings in the most customers,
+              and learn how to enhance your ads using features like ad extensions.
+              If you run into any problems with your ads, find out how to tell if
+              they're running and how to resolve approval issues.`,
+  },
+  {
+    label: "Capture Carrier and Asset Information",
     description: `Try out different ad text to see what brings in the most customers,
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
@@ -51,7 +56,7 @@ export default function VerticalLinearStepper() {
           <Step key={step.label}>
             <StepLabel
               optional={
-                index === 2 ? (
+                index === 7 ? (
                   <Typography variant="caption">Last step</Typography>
                 ) : null
               }
@@ -60,6 +65,7 @@ export default function VerticalLinearStepper() {
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
+              <br />
               <Box sx={{ mb: 2 }}>
                 <div>
                   <Button
