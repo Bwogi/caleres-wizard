@@ -24,7 +24,7 @@ const steps = [
   },
   {
     label: "Capture driver information",
-    description: `Enter driver information from a driver's license or verified employee badge name against driver's license for those who are uncomfortable using their driver's license.`,
+    description: `Enter driver information component here`,
   },
   {
     label: "Capture Carrier and Asset Information",
