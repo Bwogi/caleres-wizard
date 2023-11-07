@@ -7,11 +7,13 @@ import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Icon1 from "./Icon1";
 
 const steps = [
   {
     label: "Carrier Arrives @ Caleres",
-    description: `Notify officer that gates must be kept closed and no authorised trucks are allowed into the yard.`,
+    description: ` Note to guard: All gates must be kept closed and no authorised trucks are allowed into the yard.`,
+    icon: <Icon1 />,
   },
   {
     label: "Is the Driver at the right address?!",
