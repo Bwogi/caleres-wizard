@@ -14,23 +14,21 @@ const steps = [
     description: `Notify officer that gates must be kept closed and no authorised trucks are allowed into the yard.`,
   },
   {
-    label: "Is the Driver at the righht address?!",
+    label: "Is the Driver at the right address?!",
     description:
       "Show addresses for CAL1 and CAL2 here. Redirect to alternative address if not",
   },
   {
+    label: "Enter PINC tag",
+    description: "Pick upp a PINC tag and activate it by scanning it.",
+  },
+  {
     label: "Capture driver information",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `Enter driver information from a driver's license or verified employee badge name against driver's license for those who are uncomfortable using their driver's license.`,
   },
   {
     label: "Capture Carrier and Asset Information",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `Select Asset type...`,
   },
 ];
 
