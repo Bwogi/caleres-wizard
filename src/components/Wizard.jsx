@@ -73,7 +73,7 @@ export default function VerticalLinearStepper() {
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? "Submit Asset" : "Continue"}
+                    {index === steps.length - 1 ? "Submit Asset" : "Proceed"}
                   </Button>
                   <Button
                     disabled={index === 0}
