@@ -7,7 +7,7 @@ import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Icon1 from "./Icon1";
+// import Icon1 from "./Icon1";
 import { purple, grey } from "@mui/material/colors";
 import { ThemeProvider, createTheme } from "@mui/material";
 
@@ -21,8 +21,10 @@ const theme = createTheme({
 const steps = [
   {
     label: "Carrier Arrives @ Caleres",
-    description: ` Note to guard: All gates must be kept closed and no unauthorised trucks are allowed into the yard.`,
-    icon: <Icon1 />,
+    description: ` All gates must be kept closed.`,
+    // description1: `Unauthorised trucks are NOT allowed into the yard.`,
+
+    // icon: <Icon1 />,
   },
   {
     label: "Is the Driver at the right address?!",
@@ -74,6 +76,8 @@ export default function VerticalLinearStepper() {
               </StepLabel>
               <StepContent>
                 <Typography>{step.description}</Typography>
+                {/* <br /> */}
+                {/* <Typography>{step.description1}</Typography> */}
                 <br />
                 <Box sx={{ mb: 2 }}>
                   <div>
