@@ -28,23 +28,23 @@ const steps = [
   },
   {
     label: "Is the Driver at the right address?!",
-    description: "CAL1, CAL2 addresses.",
+    // description: "CAL1, CAL2 addresses.",
   },
-  {
-    label: "Enter PINC tag",
-    description: "Pick up a PINC tag. Scan to activate.",
-  },
-  {
-    label: "Capture driver information",
-    description: `Enter driver information component here`,
-  },
-  {
-    label: "Capture Carrier and Asset Information",
-    description: `Select Asset type...`,
-  },
+  //   {
+  //     label: "Enter PINC tag",
+  //     description: "Pick up a PINC tag. Scan to activate.",
+  //   },
+  //   {
+  //     label: "Capture driver information",
+  //     description: `Enter driver information component here`,
+  //   },
+  //   {
+  //     label: "Capture Carrier and Asset Information",
+  //     description: `Select Asset type...`,
+  //   },
 ];
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper(props) {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -75,7 +75,31 @@ export default function VerticalLinearStepper() {
                 {step.label}
               </StepLabel>
               <StepContent>
-                <Typography>{step.description}</Typography>
+                <Typography>first step</Typography>
+                {/* <br /> */}
+                {/* <Typography>{step.description1}</Typography> */}
+                <br />
+                <Box sx={{ mb: 2 }}>
+                  <div>
+                    <Button
+                      variant="contained"
+                      onClick={handleNext}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      Proceed
+                    </Button>
+                    <Button
+                      disabled={index === 0}
+                      onClick={handleBack}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      PREVIOUS STEP
+                    </Button>
+                  </div>
+                </Box>
+              </StepContent>
+              <StepContent>
+                <Typography>second step</Typography>
                 {/* <br /> */}
                 {/* <Typography>{step.description1}</Typography> */}
                 <br />

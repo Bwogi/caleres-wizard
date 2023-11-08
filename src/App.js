@@ -1,6 +1,8 @@
 import React from "react";
-import Wizard from "./components/Wizard";
+// import Wizard from "./components/Wizard";
 import { Box } from "@mui/material";
+import Step from "./components/Step";
+// import NewGrid from "./components/NewGrid";
 
 const App = () => {
   return (
@@ -22,7 +24,9 @@ const App = () => {
       alignItems="center"
       minHeight="100vh"
     >
-      <Wizard />
+      {/* <Wizard /> */}
+      <Step />
+      <br />
     </Box>
   );
 };
