@@ -21,7 +21,7 @@ const theme = createTheme({
 const steps = [
   {
     label: "Carrier Arrives @ Caleres",
-    description: ` Note to guard: All gates must be kept closed and no authorised trucks are allowed into the yard.`,
+    description: ` Note to guard: All gates must be kept closed and no unauthorised trucks are allowed into the yard.`,
     icon: <Icon1 />,
   },
   {
@@ -97,16 +97,16 @@ export default function VerticalLinearStepper() {
             </Step>
           ))}
         </Stepper>
-        {activeStep === steps.length && (
-          <Paper square elevation={0} sx={{ p: 3 }}>
-            <Typography color="secondary">
-              Asset submitted successfully!
-            </Typography>
-            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-              ENTER NEW ASSET
-            </Button>
-          </Paper>
-        )}
+        {/* {activeStep === steps.length && ( */}
+        <Paper square elevation={0} sx={{ p: 3 }}>
+          <Typography color="secondary">
+            Asset submitted successfully!
+          </Typography>
+          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+            ENTER NEW ASSET
+          </Button>
+        </Paper>
+        {/* )} */}
       </ThemeProvider>
     </Box>
   );
