@@ -90,9 +90,7 @@ export default function VerticalLinearStepper() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>
-            All steps completed - Asset successfully submitted!
-          </Typography>
+          <Typography>Asset submitted successfully!</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             NEW ASSET
           </Button>
