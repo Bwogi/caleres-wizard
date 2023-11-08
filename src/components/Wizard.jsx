@@ -92,7 +92,7 @@ export default function VerticalLinearStepper() {
         <Paper square elevation={0} sx={{ p: 3 }}>
           <Typography>Asset submitted successfully!</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            NEW ASSET
+            ENTER NEW ASSET
           </Button>
         </Paper>
       )}
