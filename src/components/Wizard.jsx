@@ -22,7 +22,7 @@ const steps = [
   },
   {
     label: "Enter PINC tag",
-    description: "Pick upp a PINC tag and activate it by scanning it.",
+    description: "Pick up a PINC tag. Scan to activate.",
   },
   {
     label: "Capture driver information",
