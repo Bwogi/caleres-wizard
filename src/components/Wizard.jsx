@@ -80,7 +80,7 @@ export default function VerticalLinearStepper() {
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                    PREVIOUS STEP
                   </Button>
                 </div>
               </Box>
