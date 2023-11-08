@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Icon1 from "./Icon1";
+import { green } from "@mui/material/colors";
 
 const steps = [
   {
@@ -90,7 +91,9 @@ export default function VerticalLinearStepper() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>Asset submitted successfully!</Typography>
+          <Typography sx={{ color: green }}>
+            Asset submitted successfully!
+          </Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             ENTER NEW ASSET
           </Button>
