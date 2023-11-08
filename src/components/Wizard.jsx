@@ -8,7 +8,15 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Icon1 from "./Icon1";
-import { green } from "@mui/material/colors";
+import { purple, grey } from "@mui/material/colors";
+import { ThemeProvider, createTheme } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: purple,
+    secondary: grey,
+  },
+});
 
 const steps = [
   {
@@ -18,8 +26,7 @@ const steps = [
   },
   {
     label: "Is the Driver at the right address?!",
-    description:
-      "Show addresses for CAL1 and CAL2 here. Redirect to alternative address if not",
+    description: "CAL1, CAL2 addresses.",
   },
   {
     label: "Enter PINC tag",
@@ -52,53 +59,55 @@ export default function VerticalLinearStepper() {
 
   return (
     <Box sx={{ maxWidth: 400 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel
-              optional={
-                index === 7 ? (
-                  <Typography variant="caption">Last step</Typography>
-                ) : null
-              }
-            >
-              {step.label}
-            </StepLabel>
-            <StepContent>
-              <Typography>{step.description}</Typography>
-              <br />
-              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    {index === steps.length - 1 ? "Submit Asset" : "Proceed"}
-                  </Button>
-                  <Button
-                    disabled={index === 0}
-                    onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    PREVIOUS STEP
-                  </Button>
-                </div>
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography sx={{ color: green }}>
-            Asset submitted successfully!
-          </Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            ENTER NEW ASSET
-          </Button>
-        </Paper>
-      )}
+      <ThemeProvider theme={theme}>
+        <Stepper activeStep={activeStep} orientation="vertical">
+          {steps.map((step, index) => (
+            <Step key={step.label}>
+              <StepLabel
+                optional={
+                  index === 7 ? (
+                    <Typography variant="caption">Last step</Typography>
+                  ) : null
+                }
+              >
+                {step.label}
+              </StepLabel>
+              <StepContent>
+                <Typography>{step.description}</Typography>
+                <br />
+                <Box sx={{ mb: 2 }}>
+                  <div>
+                    <Button
+                      variant="contained"
+                      onClick={handleNext}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      {index === steps.length - 1 ? "Submit Asset" : "Proceed"}
+                    </Button>
+                    <Button
+                      disabled={index === 0}
+                      onClick={handleBack}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      PREVIOUS STEP
+                    </Button>
+                  </div>
+                </Box>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+        {activeStep === steps.length && (
+          <Paper square elevation={0} sx={{ p: 3 }}>
+            <Typography color="secondary">
+              Asset submitted successfully!
+            </Typography>
+            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+              ENTER NEW ASSET
+            </Button>
+          </Paper>
+        )}
+      </ThemeProvider>
     </Box>
   );
 }
