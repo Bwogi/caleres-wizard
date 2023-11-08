@@ -1,21 +1,29 @@
 import React from "react";
 import Wizard from "./components/Wizard";
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 const App = () => {
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
+    // <Grid
+    //   container
+    //   spacing={0}
+    //   direction="column"
+    //   alignItems="center"
+    //   justifyContent="center"
+    //   sx={{ minHeight: "100vh" }}
+    // >
+    //   <Grid item xs={3}>
+    //     <Wizard />
+    //   </Grid>
+    // </Grid>
+    <Box
+      display="flex"
       justifyContent="center"
-      sx={{ minHeight: "100vh" }}
+      alignItems="center"
+      minHeight="100vh"
     >
-      <Grid item xs={3}>
-        <Wizard />
-      </Grid>
-    </Grid>
+      <Wizard />
+    </Box>
   );
 };
 
