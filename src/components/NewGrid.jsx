@@ -1,7 +1,9 @@
-import { Grid } from "@mui/material";
-import React from "react";
+import * as React from "react";
 import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Unstable_Grid2";
+import BasicCard from "./BasicCard";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -11,19 +13,41 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const NewGrid = () => {
+export default function NewGrid() {
   return (
-    <div>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-      </Grid>
-    </div>
-  );
-};
+    <Box>
+      <Grid container spacing={10}>
+        <Grid xs={4}>
+          {/* <Item> */}
+          <Box
+            display="flex"
+            // justifyContent="center"
+            // alignItems="center"
+            // minHeight="100vh"
+            gap={2}
+          >
+            <BasicCard
+              title="CALERES 1 Building Address"
+              street="15245 Van Vliet Ave,"
+              city="Chino"
+              state="CA 91710"
+            />
+            <BasicCard
+              title="CALERES 2 Building Address"
+              street="8985 Merrill Ave,"
+              city="Chino"
+              state="CA 91710"
+            />
+          </Box>
 
-export default NewGrid;
+          {/* </Item> */}
+        </Grid>
+        {/* <Grid xs={4}>
+          <Item>
+            <BasicCard />
+          </Item>
+        </Grid> */}
+      </Grid>
+    </Box>
+  );
+}

@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 // import Icon1 from "./Icon1";
 import { purple, grey } from "@mui/material/colors";
 import { ThemeProvider, createTheme } from "@mui/material";
+import NewGrid from "./NewGrid";
+import BasicCard from "./BasicCard";
 
 const theme = createTheme({
   palette: {
@@ -28,7 +30,7 @@ const steps = [
   },
   {
     label: "Is the Driver at the right address?!",
-    description: "CAL1, CAL2 addresses.",
+    // description: "CAL1, CAL2 addresses.",
   },
   {
     label: "Enter PINC tag",
@@ -60,24 +62,24 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 600 }}>
+    <Box>
       <ThemeProvider theme={theme}>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel
-                optional={
-                  index === 7 ? (
-                    <Typography variant="caption">Last step</Typography>
-                  ) : null
-                }
+              // optional={
+              //   index === 7 ? (
+              //     <Typography variant="caption">Last step</Typography>
+              //   ) : null
+              // }
               >
                 {step.label}
               </StepLabel>
               <StepContent>
-                <Typography>{step.description}</Typography>
-                {/* <br /> */}
-                {/* <Typography>{step.description1}</Typography> */}
+                {/* <Typography>{step.description}</Typography> */}
+                <NewGrid />
+
                 <br />
                 <Box sx={{ mb: 2 }}>
                   <div>
