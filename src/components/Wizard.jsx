@@ -78,7 +78,7 @@ export default function VerticalLinearStepper() {
               </StepLabel>
               <StepContent>
                 {/* <Typography>{step.description}</Typography> */}
-                <NewGrid />
+                {/* <NewGrid /> */}
 
                 <br />
                 <Box sx={{ mb: 2 }}>
